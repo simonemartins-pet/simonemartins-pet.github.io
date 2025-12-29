@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendário de Cuidados Pet | Simone Martins</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Tailwind (mantido por enquanto) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="min-h-screen text-gray-800 scroll-smooth">
+
+<!-- HEADER -->
+<header id="mainHeader"
+  class="fixed top-0 w-full bg-white/90 shadow z-50
+         transition-colors transition-shadow duration-300
+         h-16">
+
+  <div class="max-w-6xl mx-auto px-6 h-full flex justify-between items-center">
+
+    <span class="font-extrabold text-orange-500 text-lg whitespace-nowrap">
+      🐾 Simone Martins
+    </span>
+
+    <!-- BOTÃO HOME -->
+    <a href="index.html"
+       aria-label="Página inicial"
+       title="Página inicial"
+       class="group relative p-2 rounded-lg transition-colors hover:bg-gray-100">
+
+      <i class="fas fa-house text-xl"
+         style="color: var(--hero-to);"></i>
+
+      <span class="absolute -bottom-9 left-1/2 -translate-x-1/2
+                   bg-gray-800 text-white text-xs px-2 py-1 rounded
+                   opacity-0 group-hover:opacity-100 transition
+                   pointer-events-none whitespace-nowrap">
+        Início
+      </span>
+    </a>
+
+  </div>
+</header>
+
+<div class="h-16"></div>
+
+<!-- CONTEÚDO -->
+<main class="pt-12 px-6 pb-16 max-w-6xl mx-auto">
+
+  <h1 class="text-4xl font-extrabold text-center mb-6"
+      style="color:var(--hero-to)">
+    Calendário de Cuidados Pet
+  </h1>
+
+  <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+    Cada mês traz um tema importante para a saúde e o bem-estar de cães e gatos.
+    Use este calendário como guia prático para cuidar ainda melhor do seu pet ao longo do ano.
+  </p>
+
+  <!-- GRID -->
+  <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Os cards mensais permanecem IGUAIS aos que você já tem -->
+    <!-- Janeiro -->
+    <div class="bg-gray-100 rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Janeiro • Branco</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Saúde de filhotes e bem-estar emocional.
+      </p>
+      <a href="checklists/checklist-janeiro.pdf"
+         class="font-semibold text-sm"
+         style="color:var(--hero-to)"
+         target="_blank" rel="noopener noreferrer">
+        Baixar checklist →
+      </a>
+    </div>
+	
+    <!-- Fevereiro -->
+    <div class="bg-purple-300 rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Fevereiro • Roxo</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Cuidados com pets idosos e qualidade de vida.
+      </p>
+      <a href="checklists/checklist-fevereiro.pdf" class="font-semibold text-sm" target="_blank" rel="noopener noreferrer">Baixar checklist →</a>
+    </div>
+
+    <!-- Março -->
+    <div class="bg-blue-900 text-white rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Março • Azul Marinho</h3>
+      <p class="text-sm mb-4">
+        Prevenção de verminoses e doenças gastrointestinais.
+      </p>
+      <a href="checklists/checklist-março.pdf" class="font-semibold text-sm" target="_blank" rel="noopener noreferrer">Baixar checklist →</a>
+    </div>
+
+    <!-- Abril -->
+    <div class="bg-orange-300 rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Abril • Laranja</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Conscientização contra maus-tratos e abandono.
+      </p>
+      <a href="checklists/checklist-abril.pdf" class="font-semibold text-sm" target="_blank" rel="noopener noreferrer">Baixar checklist →</a>
+    </div>
+
+    <!-- Maio -->
+    <div class="bg-yellow-300 rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Maio • Amarelo</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Saúde renal e cuidados com a saúde bucal.
+      </p>
+      <a href="checklists/checklist-maio.pdf" class="font-semibold text-sm" style="color:var(--hero-to)" target="_blank" rel="noopener noreferrer">Baixar checklist →</a>
+    </div>
+
+    <!-- Junho -->
+    <div class="bg-violet-400 rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Junho • Violeta</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Saúde ocular, auditiva e dermatológica.
+      </p>
+      <a href="checklists/checklist-junho.pdf" class="font-semibold text-sm" style="color:var(--hero-to)" target="_blank" rel="noopener noreferrer">Baixar checklist →</a>
+    </div>
+
+    <!-- Julho -->
+    <div class="bg-yellow-500 rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Julho • Dourado</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Vacinação e prevenção de zoonoses.
+      </p>
+      <a href="checklists/checklist-julho.pdf" class="font-semibold text-sm" style="color:var(--hero-to)" target="_blank" rel="noopener noreferrer">Baixar checklist →</a>
+    </div>
+
+    <!-- Agosto -->
+    <div class="bg-green-300 rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Agosto • Verde Claro</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Leishmaniose, FIV e FELV.
+      </p>
+      <a href="checklists/checklist-agosto.pdf" class="font-semibold text-sm" style="color:var(--hero-to)" target="_blank" rel="noopener noreferrer">Baixar checklist →</a>
+    </div>
+
+    <!-- Setembro -->
+    <div class="bg-red-400 text-white rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Setembro • Vermelho</h3>
+      <p class="text-sm mb-4">
+        Saúde cardiovascular e controle de peso.
+      </p>
+      <a href="checklists/checklist-setembro.pdf" class="font-semibold text-sm" style="color:white" target="_blank" rel="noopener noreferrer">Baixar checklist →</a>
+    </div>
+
+    <!-- Outubro -->
+    <div class="bg-pink-300 rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Outubro • Rosa</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Prevenção do câncer de mama em fêmeas.
+      </p>
+      <a href="checklists/checklist-outubro.pdf" class="font-semibold text-sm" style="color:var(--hero-to)" target="_blank" rel="noopener noreferrer">Baixar checklist →</a>
+    </div>
+
+    <!-- Novembro -->
+    <div class="bg-blue-400 rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Novembro • Azul</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Prevenção do câncer de próstata em machos.
+      </p>
+      <a href="checklists/checklist-novembro.pdf" class="font-semibold text-sm" style="color:var(--hero-to)" target="_blank" rel="noopener noreferrer">Baixar checklist →</a>
+    </div>
+
+    <!-- Dezembro -->
+    <div class="bg-green-400 rounded-2xl p-6 shadow">
+      <h3 class="font-bold">Dezembro • Verde</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Combate ao abandono e cuidados com festas e fogos.
+      </p>
+      <a href="checklists/checklist-dezembro.pdf" class="font-semibold text-sm" style="color:var(--hero-to)" target="_blank" rel="noopener noreferrer">Baixar checklist →</a>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/5521972045256"
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600
+          transition text-white w-16 h-16 flex items-center
+          justify-center rounded-full shadow-2xl z-50"
+   target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp text-3xl"></i>
+</a>
+
+<footer class="bg-black text-gray-400 text-center py-4 text-sm">
+  <div class="flex justify-center items-center gap-2 text-2xl">
+    <a href="https://www.instagram.com/seuPerfil" target="_blank" class="text-pink-600 flex items-center gap-2">
+      <i class="fab fa-instagram"></i>
+      <span class="text-sm font-semibold">@simonemartins-pet</span>
+    </a>
+  </div><br>
+  © 2025 • Simone Martins • Pet Sitter <br>
+  📍 Atendimento no Grajaú e bairros vizinhos — consulte-nos
+</footer>
+
+<!-- JS GLOBAL -->
+<script src="assets/js/main.js" defer></script>
+
+<!-- 🔔 POPUP MENSAL -->
+<div id="popupMes"
+     class="fixed inset-0 bg-black/60 flex items-center justify-center hidden z-50">
+
+  <div class="bg-white rounded-2xl p-8 max-w-md text-center animate-fadeIn">
+    <h2 id="popupTitulo" class="text-2xl font-bold mb-4"></h2>
+    <p id="popupTexto" class="mb-6"></p>
+
+    <button onclick="fecharPopup()"
+            class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-bold">
+      Entendi 🐾
+    </button>
+  </div>
+
+</div>
+
+
+</body>
+</html>

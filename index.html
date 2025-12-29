@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pet Sitter | Simone Martins</title>
+
+  <meta name="description" content="Pet Sitter com atendimento domiciliar. Cuidados personalizados e carinho para seu pet. Agende pelo WhatsApp.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS EXTERNO -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- SEO Local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Simone Martins - Pet Sitter",
+    "telephone": "+5521972045256",
+    "description": "Hospedagem, banho em casa e visitas com cuidados especiais para cães e gatos.",
+    "sameAs": ["https://wa.me/5521972045256"]
+  }
+  </script>
+</head>
+
+<body class="min-h-screen text-gray-800 scroll-smooth">
+
+<!-- ================= HEADER ================= -->
+<header id="mainHeader"
+  class="fixed top-0 w-full bg-white/90 shadow z-50
+         transition-colors transition-shadow duration-300
+         h-16">
+
+  <div class="max-w-6xl mx-auto px-6 h-full flex justify-between items-center">
+
+    <span class="font-extrabold text-orange-500 text-lg whitespace-nowrap">
+      🐾 Simone Martins
+    </span>
+
+    <div class="flex items-center gap-4">
+
+      <div class="relative">
+        <button id="menuBtn"
+          aria-label="Abrir menu"
+          class="p-2 rounded-lg hover:bg-gray-100 transition">
+          <i class="fas fa-bars text-xl text-gray-700"></i>
+        </button>
+
+        <div id="menu"
+          class="hidden absolute right-0 mt-2 bg-white rounded-xl shadow-lg overflow-hidden min-w-[180px] z-50">
+          <a href="dicas.html" class="block px-4 py-3 hover:bg-gray-100 transition">🐾 Dicas para Pets</a>
+          <a href="calendario.html" class="block px-4 py-3 hover:bg-gray-100 transition">🐾 Calendário Pet</a>
+          <a href="faq.html" class="block px-4 py-3 hover:bg-gray-100 transition">🐾 FAQ</a>
+          <a href="sobre.html" class="block px-4 py-3 hover:bg-gray-100 transition">🐾 Sobre</a>
+        </div>
+      </div>
+
+      <a href="https://wa.me/5521972045256"
+        class="hidden md:inline bg-green-500 hover:bg-green-600 transition
+               text-white px-5 py-2 rounded-full text-sm font-bold">
+        WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+</header>
+
+<div class="h-16"></div>
+
+<!-- ================= HERO ================= -->
+<section class="relative"
+  style="background: linear-gradient(135deg, var(--hero-from), var(--hero-to));">
+
+  <div class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+
+    <div class="text-white">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Pet Sitter no Grajaú (RJ)
+      </h1>
+      <p class="mt-4 text-lg text-gray-100">
+        Carinho, rotina e segurança para o seu pet — no horário que combina com vocês.
+      </p>
+      <p class="mt-2 text-base text-gray-100">
+        Atendemos também bairros vizinhos — consulte-nos!
+      </p>
+      <div class="mt-8">
+		<a href="https://wa.me/5521972045256?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços,%20disponibilidade%20de%20horários%20e%20como%20funciona%20o%20agendamento."
+		   class="bg-green-500 hover:bg-green-600 transition
+				  text-white font-bold px-8 py-4 rounded-full shadow-xl inline-block">
+		  <i class="fab fa-whatsapp mr-2"></i> Agendar pelo WhatsApp
+		</a>
+      </div>
+    </div>
+
+	<div class="hero-container">
+	  <img 
+		id="heroImage"
+		alt="Cachorro e gato felizes juntos"
+		loading="eager"
+		class="transition-opacity duration-1000 opacity-0"
+	  >
+	  <div class="overlay"></div>
+	</div>
+
+</section>
+
+<!-- ================= SERVIÇOS ================= -->
+<section class="max-w-6xl mx-auto px-6 py-10">
+  <h2 class="text-3xl font-bold text-center mb-12">Serviços oferecidos</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition">
+      <h3 class="font-bold text-orange-500 text-xl mb-2">🐾 Hospedagem domiciliar</h3>
+      <p class="text-gray-700 mb-4">
+        Vai viajar? Seu pet fica com carinho, rotina mantida e atenção o tempo todo.
+      </p>
+		<a href="https://wa.me/5521972045256?text=Olá!%20Tenho%20interesse%20no%20serviço%20de%20HOSPEDAGEM%20domiciliar%20para%20meu%20pet."
+		   class="text-green-600 font-bold hover:text-green-800 transition-colors">
+		  Reservar hospedagem
+		</a>
+    </div>
+
+    <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition">
+      <h3 class="font-bold text-orange-500 text-xl mb-2">🛁 Banho em casa</h3>
+      <p class="text-gray-700 mb-4">
+        Banho no conforto de casa, no horário que combina com a rotina do seu pet.
+      </p>
+		<a href="https://wa.me/5521972045256?text=Olá!%20Gostaria%20de%20agendar%20o%20serviço%20de%20BANHO%20em%20casa%20para%20meu%20pet."
+		   class="text-green-600 font-bold hover:text-green-800 transition-colors">
+		  Agendar banho
+		</a>
+    </div>
+
+    <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition">
+      <h3 class="font-bold text-orange-500 text-xl mb-2">🍽️ Visitas com cuidados especiais</h3>
+      <p class="text-gray-700 mb-4">
+        Medicação, água e ração com responsabilidade e relatórios.
+      </p>
+		<a href="https://wa.me/5521972045256?text=Olá!%20Preciso%20do%20serviço%20de%20VISITA%20com%20cuidados%20especiais%20para%20meu%20pet."
+		   class="text-green-600 font-bold hover:text-green-800 transition-colors">
+		  Agendar visita
+		</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= DIFERENCIAIS ================= -->
+<section class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">
+        Por que escolher meu serviço?
+    </h2>
+	<div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition text-center">
+            <i class="fas fa-heart text-orange-500 text-3xl mb-4"></i>
+            <h3 class="font-bold mb-2">Amor e atenção</h3>
+            <p class="text-sm text-gray-600">Seu pet tratado como família, com rotina, brincadeiras e companhia de verdade.</p>
+        </div>
+		<div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition text-center">
+			<i class="fas fa-arrows-left-right text-orange-500 text-3xl mb-4"></i>
+			<h3 class="font-bold mb-2">Flexibilidade</h3>
+			<p class="text-sm text-gray-600">
+				Serviços ajustados à rotina do cliente e do pet — horários adaptáveis para maior conveniência.
+			</p>
+		</div>
+        <div class="bg-white rounded-2xl p-6 shadow hover:shadow-xl transition text-center">
+            <i class="fas fa-home text-orange-500 text-3xl mb-4"></i>
+            <h3 class="font-bold mb-2">Ambiente familiar</h3>
+			<p class="text-sm text-gray-600">Zero estresse de hotel: aconchego, silêncio e segurança, como em casa.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= DEPOIMENTOS ================= -->
+<div id="depoimentos-container"></div>
+
+<!-- ================= CTA ================= -->
+<section class="bg-gray-900 text-white py-10 text-center">
+  <h2 class="text-3xl font-bold mb-4">Pronto para cuidar ainda melhor do seu pet?</h2>
+  <p class="text-gray-300 mb-8">
+    Atendimento sob agendamento • Vagas limitadas
+  </p>
+  <a href="https://wa.me/5521972045256"
+    class="bg-green-500 hover:bg-green-600 transition
+           text-white font-bold px-10 py-4 rounded-full shadow-2xl">
+    <i class="fab fa-whatsapp mr-2"></i> Falar agora no WhatsApp
+  </a>
+</section>
+
+<footer class="bg-black text-gray-400 text-center py-4 text-sm">
+  <div class="flex justify-center items-center gap-2 text-2xl">
+    <a href="https://www.instagram.com/seuPerfil" target="_blank" class="text-pink-600 flex items-center gap-2">
+      <i class="fab fa-instagram"></i>
+      <span class="text-sm font-semibold">@simonemartins-pet</span>
+    </a>
+  </div><br>
+  © 2025 • Simone Martins • Pet Sitter <br>
+  📍 Atendimento no Grajaú e bairros vizinhos — consulte-nos
+</footer>
+
+<!-- ================= JS EXTERNO ================= -->
+<script src="assets/js/main.js" defer></script>
+
+</body>
+</html>
+
