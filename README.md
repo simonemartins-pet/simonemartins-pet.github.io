@@ -3,7 +3,7 @@
 Site institucional da **Simone Martins – Pet Sitter**, desenvolvido para apresentar serviços de cuidados domiciliares para cães e gatos, com foco em carinho, rotina, segurança e atendimento personalizado.
 
 🔗 **Acesse o site:**  
-https://simone-martins-pet.github.io/site/
+https://simonemartins-pet.github.io
 
 ---
 
