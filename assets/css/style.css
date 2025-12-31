@@ -23,7 +23,7 @@ h1,h2,h3{
 .effect-item,
 .snowflake{
   position:fixed;
-  top:-20px;
+  top:-40px;
   pointer-events:none;
   z-index:9999;
   animation:fall linear infinite;
