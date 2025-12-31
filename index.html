@@ -212,6 +212,19 @@
   📍 Atendimento no Grajaú e bairros vizinhos — consulte-nos
 </footer>
 
+<!-- POP-UP SAZONAL -->
+<div id="popupSazonal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+  <div class="bg-white rounded-2xl p-6 shadow-xl max-w-sm text-center">
+    <div id="popupIcon" class="text-5xl mb-3"></div>
+    <h3 id="popupTitle" class="text-2xl font-bold mb-2"></h3>
+    <p id="popupMessage" class="text-gray-600 mb-4"></p>
+    <button onclick="fecharPopup()"
+      class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full">
+      Fechar
+    </button>
+  </div>
+</div>
+
 <!-- ================= JS EXTERNO ================= -->
 <script src="assets/js/main.js" defer></script>
 
