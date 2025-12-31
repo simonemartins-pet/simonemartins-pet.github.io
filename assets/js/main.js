@@ -180,3 +180,110 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/* ================= SCRIPT DATAS COMEMORATIVAS ================= */
+document.addEventListener("DOMContentLoaded", () => {
+
+  const hoje = new Date();
+  const dia = hoje.getDate();
+  const mes = hoje.getMonth() + 1;
+
+  function iniciarEfeito(emoji, quantidade) {
+    for (let i = 0; i < quantidade; i++) {
+      const item = document.createElement("div");
+      item.className = emoji === "❄" ? "snowflake" : "effect-item";
+      item.textContent = emoji;
+      item.style.left = Math.random() * 100 + "vw";
+      item.style.fontSize = Math.random() * 14 + 12 + "px";
+      item.style.animationDuration = Math.random() * 5 + 6 + "s";
+      document.body.appendChild(item);
+    }
+  }
+
+  if (dia === 25 && mes === 12) iniciarEfeito("❄", 50);
+  if (dia === 1 && mes === 1) iniciarEfeito("🎉", 45);
+  if (dia === 31 && mes === 3) iniciarEfeito("🥚", 40);
+  if (dia === 31 && mes === 10) iniciarEfeito("🎃", 40);
+
+});
+
+/* ================= POPUP DATAS COMEMORATIVAS ================= */
+document.addEventListener("DOMContentLoaded", () => {
+
+  const eventos = [
+    {
+      id: "natal",
+      inicio: "12-24",
+      fim: "12-25",
+      icon: "🎄",
+      title: "Feliz Natal!",
+      message: "Que este Natal seja repleto de amor, cuidado e momentos especiais ao lado de quem você ama — incluindo seus pets 🐾❤️"
+    },
+    {
+      id: "ano-novo",
+      inicio: "12-31",
+      fim: "01-01",
+      icon: "🎆",
+      title: "Feliz Ano Novo!",
+      message: "Que o novo ano traga saúde, alegria e muitos momentos felizes com seu pet 🐾✨"
+    },
+    {
+      id: "pascoa",
+      inicio: "03-25",
+      fim: "04-01",
+      icon: "🐣",
+      title: "Feliz Páscoa!",
+      message: "Desejo uma Páscoa cheia de carinho, renovação e cuidado com quem faz sua vida mais feliz 🐾💛"
+    },
+    {
+      id: "halloween",
+      inicio: "10-31",
+      fim: "10-31",
+      icon: "🎃",
+      title: "Feliz Halloween!",
+      message: "Um Halloween cheio de diversão, cuidado e segurança para você e seu pet 🐾🎃"
+    }
+  ];
+
+  const hoje = new Date();
+  const hojeMMDD =
+    String(hoje.getMonth() + 1).padStart(2, '0') + "-" +
+    String(hoje.getDate()).padStart(2, '0');
+
+  const popup = document.getElementById("popupSazonal");
+  if (!popup) return;
+
+  eventos.forEach(evento => {
+    const visto = localStorage.getItem("popup_" + evento.id);
+
+    if (!visto && dentroDoPeriodo(hojeMMDD, evento.inicio, evento.fim)) {
+      abrirPopup(evento);
+    }
+  });
+
+  function abrirPopup(evento) {
+    document.getElementById("popupIcon").textContent = evento.icon;
+    document.getElementById("popupTitle").textContent = evento.title;
+    document.getElementById("popupMessage").textContent = evento.message;
+
+    popup.classList.remove("hidden");
+    popup.dataset.eventoId = evento.id;
+  }
+
+});
+
+function fecharPopup() {
+  const popup = document.getElementById("popupSazonal");
+  if (!popup) return;
+
+  const eventoId = popup.dataset.eventoId;
+  localStorage.setItem("popup_" + eventoId, "true");
+  popup.classList.add("hidden");
+}
+
+function dentroDoPeriodo(hoje, inicio, fim) {
+  if (inicio <= fim) {
+    return hoje >= inicio && hoje <= fim;
+  }
+  return hoje >= inicio || hoje <= fim;
+}
+
