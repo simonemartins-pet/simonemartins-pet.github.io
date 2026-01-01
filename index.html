@@ -65,6 +65,14 @@
           <a href="sobre.html" class="block px-4 py-3 hover:bg-gray-100 transition">🐾 Sobre</a>
         </div>
       </div>
+	  
+	  <!-- BOTÃO BUSCA -->
+		<button id="openSearch"
+		  aria-label="Buscar no site"
+		  class="p-2 rounded-lg hover:bg-gray-100 transition">
+		  <i class="fas fa-search text-lg" style="color: var(--hero-to);"></i>
+		</button>
+
 
       <a href="https://wa.me/5521972045256"
         class="hidden md:inline bg-green-500 hover:bg-green-600 transition
@@ -225,8 +233,41 @@
   </div>
 </div>
 
+<canvas
+  id="snow"
+  class="fixed inset-0 pointer-events-none z-40 hidden">
+</canvas>
+
+<!-- MODAL BUSCA GLOBAL -->
+<div id="searchModal"
+  class="fixed inset-0 bg-black/50 hidden items-center justify-center z-[9999]">
+
+  <div class="bg-white rounded-2xl shadow-xl w-full max-w-lg p-6 mx-4">
+
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-bold">Buscar no site</h2>
+      <button id="closeSearch" class="text-gray-500 hover:text-gray-700">
+        ✖
+      </button>
+    </div>
+
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Digite uma palavra-chave…"
+      class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400">
+
+    <ul id="searchResults" class="mt-4 space-y-3"></ul>
+
+  </div>
+</div>
+
+
 <!-- ================= JS EXTERNO ================= -->
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/search.js" defer></script>
+
+
 
 </body>
 </html>
