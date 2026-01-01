@@ -15,7 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   closeBtn.onclick = () => fechar();
-  modal.onclick = e => e.target === modal && fechar();
+
+  modal.onclick = e => {
+    if (e.target === modal) fechar();
+  };
 
   function fechar() {
     modal.classList.add("hidden");
@@ -50,15 +53,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (text.includes(query)) {
           const li = document.createElement("li");
+
           li.innerHTML = `
-            <a href="${page.url}"
-               class="block p-3 rounded-lg hover:bg-gray-100 transition">
+            <button
+              class="w-full text-left p-3 rounded-lg hover:bg-gray-100 transition">
               🔎 <strong>${page.name}</strong><br>
               <span class="text-sm text-gray-500">
                 Palavra encontrada nesta página
               </span>
-            </a>
+            </button>
           `;
+
+          li.querySelector("button").onclick = () => {
+            fechar();
+            window.location.href = page.url;
+          };
+
           results.appendChild(li);
         }
 
@@ -68,7 +78,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (!results.children.length) {
-      results.innerHTML = `<li class="text-gray-500">Nenhum resultado encontrado</li>`;
+      results.innerHTML = `
+        <li class="text-gray-500 p-3">
+          Nenhum resultado encontrado
+        </li>`;
     }
   });
 
