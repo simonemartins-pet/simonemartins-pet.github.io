@@ -287,3 +287,80 @@ function dentroDoPeriodo(hoje, inicio, fim) {
   return hoje >= inicio || hoje <= fim;
 }
 
+/* ================= FLOCO DE NEVE CANVAS ================= */
+document.addEventListener("DOMContentLoaded", () => {
+
+  const hoje = new Date();
+  const dia = hoje.getDate();
+  const mes = hoje.getMonth() + 1;
+
+  // 🎯 RODAR SOMENTE EM 02/01
+  if (!(dia === 25 && mes === 12)) return;
+
+  const canvas = document.getElementById("snow");
+  if (!canvas) return;
+
+  canvas.classList.remove("hidden");
+
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  resizeCanvas();
+  window.addEventListener("resize", resizeCanvas);
+
+  let flakes = [];
+
+  function criarFloco() {
+    return {
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 4 + 1,
+      d: Math.random() + 1
+    };
+  }
+
+  const TOTAL_FLOCOS = 80;
+
+  for (let i = 0; i < TOTAL_FLOCOS; i++) {
+    flakes.push(criarFloco());
+  }
+
+  let angle = 0;
+
+  function atualizarNeve() {
+    angle += 0.01;
+    for (let i = 0; i < flakes.length; i++) {
+      let f = flakes[i];
+      f.y += Math.pow(f.d, 2) + 0.5;
+      f.x += Math.sin(angle) * 1.5;
+
+      if (f.y > canvas.height) {
+        flakes[i] = criarFloco();
+        flakes[i].y = 0;
+      }
+    }
+  }
+
+  function desenharNeve() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "rgba(255,255,255,0.8)";
+    ctx.beginPath();
+
+    for (let i = 0; i < flakes.length; i++) {
+      let f = flakes[i];
+      ctx.moveTo(f.x, f.y);
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+    }
+
+    ctx.fill();
+    atualizarNeve();
+    requestAnimationFrame(desenharNeve);
+  }
+
+  desenharNeve();
+
+});
