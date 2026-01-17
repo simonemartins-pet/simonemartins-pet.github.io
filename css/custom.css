@@ -1,0 +1,221 @@
+
+    /* Paleta aplicada ao topo e hero */
+    .wrap {
+      background: #970747;
+      background: -moz-linear-gradient(45deg, #970747 0%, #c06a90 100%);
+      background: -webkit-linear-gradient(45deg, #970747 0%, #c06a90 100%);
+      background: linear-gradient(45deg, #970747 10%, #c06a90 100%);
+    }
+    #ftco-navbar { background-color: transparent; }
+    #ftco-navbar.navbar-dark .navbar-nav .nav-link:hover { color: #c06a90; }
+    .hero-wrap.hero-wrap-2 .overlay {
+      opacity: .55;
+      background: #970747;
+      background: -moz-linear-gradient(45deg, #970747 0%, #c06a90 100%);
+      background: -webkit-linear-gradient(45deg, #970747 0%, #c06a90 100%);
+      background: linear-gradient(45deg, #970747 0%, #c06a90 100%);
+    }
+
+    /* Caixa e grid do agendamento */
+    .agendamento-box { background:#fff; border:1px solid #eee; border-radius:.75rem; padding:2rem; box-shadow:0 8px 20px rgba(0,0,0,.05); }
+    .form-grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+    .form-grid .field.full { grid-column: 1 / -1; }
+    .agendamento-box label { font-weight:600; margin-bottom:.25rem; display:block; }
+    .agendamento-box input,
+    .agendamento-box select,
+    .agendamento-box textarea { width:100%; border:1px solid #ddd; border-radius:.5rem; padding:.65rem .8rem; font-size:1rem; }
+    .agendamento-box input:focus,
+    .agendamento-box select:focus,
+    .agendamento-box textarea:focus { outline:none; border-color: #970747; box-shadow: 0 0 0 .2rem rgba(214,48,227,.15); }
+    .agendamento-box .btn.btn-primary { background-color: #970747; border-color: #970747; }
+    .agendamento-box .btn.btn-primary:hover, .agendamento-box .btn.btn-primary:focus { background-color: #c2185b; border-color: #c2185b; }
+	
+	
+	/* === Paleta rosa/roxo para a seção de agendamento === */
+
+	/* Overlay da seção com a imagem de fundo */
+	.ftco-appointment.img .overlay {
+	  opacity: .55;
+	  background: #970747;
+	  background: -moz-linear-gradient(45deg, #970747 0%, #c06a90 100%);
+	  background: -webkit-linear-gradient(45deg, #970747 0%, #c06a90 100%);
+	  background: linear-gradient(45deg, #970747 0%, #c06a90 100%);
+	  /* Se o tema continuar forçando outra cor, adicione !important na última linha */
+	}
+
+	/* Botão primário dentro da seção (WhatsApp) */
+	.ftco-appointment .btn.btn-primary {
+	  background-color: #970747;
+	  border-color: #970747;
+	  color: #fff;
+	}
+	.ftco-appointment .btn.btn-primary:hover,
+	.ftco-appointment .btn.btn-primary:focus {
+	  background-color: #c2185b;
+	  border-color: #c2185b;
+	  color: #fff;
+	}
+
+	/* (Opcional) Legibilidade sobre a imagem com overlay */
+	.ftco-appointment h2,
+	.ftco-appointment p {
+	  color: #fff; /* texto branco sobre o overlay */
+	}
+	.ftco-appointment p a {
+	  color: #c06a90; /* links em rosa claro dentro do parágrafo (se houver) */
+	}
+
+
+/* === Footer compacto no desktop === */
+@media (min-width: 992px) {
+  /* Reduce top/bottom padding do footer */
+  .footer {
+    padding-top: 24px !important;   /* era ~7em no tema */
+    padding-bottom: 24px !important;
+  }
+
+  /* Diminui o espaçamento extra entre os blocos e o rodapé final */
+  .footer .row.mt-5 {
+    margin-top: 12px !important;    /* era 3rem (mt-5) */
+  }
+
+  /* Ajusta espaçamento vertical das colunas (já existe mb-md-0) */
+  .footer [class*="col-"].mb-4 {
+    margin-bottom: 12px !important; /* pequeno respiro, sem exagero */
+  }
+
+  /* Remover espaço sobrando abaixo da última linha */
+  .footer p.copyright {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+/* Opcional: reduzir heading e parágrafos do footer */
+.footer .footer-heading {
+  font-size: 1.05rem;
+  margin-bottom: .75rem;
+}
+.footer p {
+  margin-bottom: .75rem;
+}
+
+
+/* Força texto branco no botão do formulário de agendamento */
+.agendamento-box .btn.btn-primary,
+.agendamento-box .btn.btn-primary:hover,
+.agendamento-box .btn.btn-primary:focus,
+.agendamento-box .btn.btn-primary:active,
+.agendamento-box a.btn.btn-primary:hover,
+.agendamento-box a.btn.btn-primary:focus,
+.agendamento-box a.btn.btn-primary:active {
+  color: #FFFFFF !important; /* texto branco */
+}
+
+
+/* Gradiente exatamente como o header */
+.testimony-section.testimony-gradient{
+  background: #970747;
+  background: -moz-linear-gradient(45deg, #970747 10%, #c06a90 100%);
+  background: -webkit-linear-gradient(45deg, #970747 10%, #c06a90 100%);
+  background: linear-gradient(45deg, #970747 10%, #c06a90 100%)!important;
+}
+
+/* 2.2 Cartões: espaço para o ícone e sombra suave */
+.testimony-section .testimony-wrap {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 26px rgba(0,0,0,.08);
+  padding: 2.75rem 1.75rem 1.75rem; /* top maior por causa do ícone */
+  overflow: visible;
+}
+
+/* 2.3 Ícone: fora do fluxo e acima do card, sem sobrepor o texto */
+.testimony-section .testimony-wrap .icon {
+  position: absolute;
+  top: 0; left: 2rem;
+  transform: translateY(-50%);
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: #207dff;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  pointer-events: none; /* impede capturar clique/drag */
+}
+.testimony-section .testimony-wrap .icon .fa { font-size: 16px; }
+
+/* 2.4 Texto seguro abaixo do ícone */
+.testimony-section .testimony-wrap .text { position: relative; z-index: 1; }
+
+/* 2.5 Avatar “genérico” */
+.testimony-section .user-img {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: #eef3ff url('images/paw.svg') center/22px 22px no-repeat;
+}
+
+/* 2.6 Dots visíveis no degradê (branco translúcido + ativo em verde) */
+.testimony-section .owl-dots .owl-dot span {
+  background: rgba(255,255,255,.6);
+}
+.testimony-section .owl-dots .owl-dot.active span,
+.testimony-section .owl-dots .owl-dot:hover span {
+  background: #00bd55;
+}
+
+/* 2.7 Títulos claros sobre o degradê */
+.testimony-section.testimony-gradient .heading-section h2 { color: #fff; }
+.testimony-section.testimony-gradient .heading-section p  { color: rgba(255,255,255,.85); }
+
+/* 2.8 Resposta (1/2/3 colunas) – caso o tema não trate */
+@media (min-width: 992px) {
+  .carousel-testimony .item { padding: .25rem .5rem; } /* respiro lateral */
+}
+
+
+
+/* 1) Afina o conteúdo da seção de depoimentos */
+#depoimentos .container {
+  /* escolha um alvo: 880–1040px; use clamp p/ ficar fluido */
+  max-width: clamp(780px, 84vw, 980px);
+}
+
+/* 2) Ajuste de “respiro” lateral se quiser menos conteúdo na borda */
+#depoimentos .container,
+#depoimentos .row {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* 3) (Opcional) Mostrar somente 2 cards em telas grandes para impressão mais estreita */
+@media (min-width: 1200px) {
+  #depoimentos .owl-stage { margin-left: auto; margin-right: auto; }
+}
+
+
+
+/* Perguntas do FAQ (index) — aumentar o tamanho da fonte */
+.ftco-faqs .card-header .btn.btn-link > span.mb-0 {
+  font-size: clamp(1rem, 2.2vw, 1.15rem); /* ajuste conforme seu gosto */
+  line-height: 1.3;
+  font-weight: 400; /* opcional: deixa a pergunta um pouco mais "forte" */
+}
+
+/* (opcional) Ajusta o ícone da seta para acompanhar o novo tamanho */
+.ftco-faqs .card-header .btn.btn-link .fa {
+  font-size: 1rem;
+}
+
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:static;width:auto;height:auto;padding:.5rem 1rem;background:#000;color:#fff;z-index:1000}
+.price-tag {font-size:2rem; font-weight:700; color:#207dff}
+.price-note {font-size:.9rem; color:#6c757d}
+.block-7 .features{list-style:none;padding-left:0}
+.badge-best{background:#ffb400;color:#222;border-radius:4px;font-weight:600;padding:.2rem .4rem}
+.badge-coupon{display:inline-block;background:#ff4d4f;color:#fff;border-radius:4px;font-weight:700;font-size:.85rem;padding:.15rem .5rem;margin-bottom:.35rem}
+.badge-promo{display:inline-block;background:#00c853;color:#fff;border-radius:4px;font-weight:800;font-size:.9rem;padding:.25rem .6rem;letter-spacing:.5px;margin:.25rem 0 .5rem}
+.block-7{position:relative}
+
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}.skip-link:focus{position:static;width:auto;height:auto;padding:.5rem 1rem;background:#000;color:#fff;z-index:1000}
